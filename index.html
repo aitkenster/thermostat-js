@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thermostat</title>
+	<meta charset='utf8'>
+</head>
+<body>
+<h2><span class="temp"></span></h2>
+</body>
+<script src="lib/jasmine/src/Thermostat.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var thermostat = new Thermostat();
+		$('.temp').text(thermostat.temperature);
+	});
+
+</script>
+</html>
