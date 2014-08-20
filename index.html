@@ -5,7 +5,10 @@
 	<meta charset='utf8'>
 </head>
 <body>
-<h2><span class="temp"></span></h2>
+<h2><span class="temp"></span>°</h2>
+<button class="increase">+</button><br>
+<button class="decrease">-</button><br>
+<button class="reset">Reset</button>
 </body>
 <script src="lib/jasmine/src/Thermostat.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -13,6 +16,16 @@
 	$(document).ready(function(){
 		var thermostat = new Thermostat();
 		$('.temp').text(thermostat.temperature);
+
+		$('.increase').on('click', function(){
+			thermostat.increaseTemperature();
+			$('.temp').text(thermostat.temperature);
+			});
+
+		$('.decrease').on('click', function(){
+			thermostat.decreaseTemperature();
+			$('.temp').text(thermostat.temperature);
+			});
 	});
 
 </script>
