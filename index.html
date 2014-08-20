@@ -10,27 +10,47 @@
 <button class="increase">+</button>
 <button class="decrease">-</button><br>
 <button class="reset">Reset</button>
+<style>
+	.high {
+		color: red;
+	}
+
+	.average{
+		color: orange;
+	}
+
+	.low {
+		color: green;
+	}
+</style>
 </body>
 <script src="lib/jasmine/src/Thermostat.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script>
 	$(document).ready(function(){
 		var thermostat = new Thermostat();
-		$('.temp').text(thermostat.temperature);
+
+		function updateTemperature() {
+			$('.temp').text(thermostat.temperature);
+			thermostat.getEnergyRating()
+			$('h2').attr('class', thermostat.energyRating)
+		}
+
+		updateTemperature()
 
 		$('.increase').on('click', function(){
 			thermostat.increaseTemperature();
-			$('.temp').text(thermostat.temperature);
+			updateTemperature();
 			});
 
 		$('.decrease').on('click', function(){
 			thermostat.decreaseTemperature();
-			$('.temp').text(thermostat.temperature);
+			updateTemperature();
 			});
 
 		$('.reset').on('click', function(){
 			thermostat.reset();
-			$('.temp').text(thermostat.temperature);
+			updateTemperature();
 		});
 
 		$('.psm').on('change', function(){

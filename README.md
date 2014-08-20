@@ -1,4 +1,11 @@
 thermostat-js
 =============
 
-A programme for a smart thermostat, built in JS
+A smart thermostat program, built entirely in javascript.
+
+Technologies Used
+-----------------
+Javascript
+JQuery
+Git
+Jasmine
