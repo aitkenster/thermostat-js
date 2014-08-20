@@ -6,7 +6,8 @@
 </head>
 <body>
 <h2><span class="temp"></span>°</h2>
-<button class="increase">+</button><br>
+<input type="checkbox" class="psm" checked>Power Saving Mode<br>
+<button class="increase">+</button>
 <button class="decrease">-</button><br>
 <button class="reset">Reset</button>
 </body>
@@ -26,6 +27,15 @@
 			thermostat.decreaseTemperature();
 			$('.temp').text(thermostat.temperature);
 			});
+
+		$('.reset').on('click', function(){
+			thermostat.reset();
+			$('.temp').text(thermostat.temperature);
+		});
+
+		$('.psm').on('change', function(){
+			thermostat.powerSave = $(this).prop('checked');
+		})
 	});
 
 </script>
