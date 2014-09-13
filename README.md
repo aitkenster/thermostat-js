@@ -15,8 +15,8 @@ A smart thermostat program, built entirely in javascript.
 - You can reset the temperature to 20 by hitting  the reset button
 - The thermostat colours the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
 
-Technologies Used
------------------
+### Technologies Used
+
 + Javascript
 + JQuery
 + Git
