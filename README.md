@@ -17,12 +17,10 @@ git clone git@github.com:aitkenster/thermostat-js.git
 cd thermostat-js
 ```
 
-
-How to run it:
 ### How to run it
 
-Open index.html in the browser.
+Open _index.html_ in the browser.
 
 ### How to test it:
 
-Open /lib/jasmine/SpecRunner.html in the browser.
+Open _/lib/jasmine/SpecRunner.html_ in the browser.
